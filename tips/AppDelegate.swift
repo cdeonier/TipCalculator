@@ -10,9 +10,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let DEFAULT_BILL_AMOUNT = "bill_amount"
+    let DEFAULT_BILL_SAVED_TIME = "bill_saved_time"
+    let NUM_SECONDS_TO_SAVE_BILL_AMOUNT = 10 * 60;
+    
+    let theme = Theme()
 
     var window: UIWindow?
-
+    var billAmount: Double?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,16 +31,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if billAmount != nil {
+            defaults.setDouble(billAmount!, forKey: DEFAULT_BILL_AMOUNT)
+            defaults.setObject(NSDate(), forKey: DEFAULT_BILL_SAVED_TIME)
+            defaults.synchronize()
+        }
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if  let savedBillDate = defaults.objectForKey(DEFAULT_BILL_SAVED_TIME) {
+            if Int(NSDate().timeIntervalSinceDate(savedBillDate as! NSDate)) < NUM_SECONDS_TO_SAVE_BILL_AMOUNT {
+                billAmount = defaults.doubleForKey(DEFAULT_BILL_AMOUNT)
+            }
+        } else {
+            billAmount = nil
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {

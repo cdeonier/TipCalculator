@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		AAD39DB31C2C823200712C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DB21C2C823200712C0C /* AppDelegate.swift */; };
-		AAD39DB51C2C823200712C0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DB41C2C823200712C0C /* ViewController.swift */; };
+		AAD39DB51C2C823200712C0C /* TipsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DB41C2C823200712C0C /* TipsController.swift */; };
 		AAD39DB81C2C823200712C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD39DB61C2C823200712C0C /* Main.storyboard */; };
 		AAD39DBA1C2C823200712C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD39DB91C2C823200712C0C /* Assets.xcassets */; };
 		AAD39DBD1C2C823200712C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD39DBB1C2C823200712C0C /* LaunchScreen.storyboard */; };
+		AAD39DC61C2CF33400712C0C /* TipsSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DC51C2CF33400712C0C /* TipsSettingsController.swift */; };
+		AAD39DC91C2D2C9D00712C0C /* PreferencesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DC81C2D2C9D00712C0C /* PreferencesUtil.swift */; };
+		AAD39DCC1C2E02AE00712C0C /* TipsPercentageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DCB1C2E02AE00712C0C /* TipsPercentageController.swift */; };
+		AAD39DCF1C2E282500712C0C /* TipSelectedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DCE1C2E282500712C0C /* TipSelectedDelegate.swift */; };
+		AAD39DD61C2F8C7D00712C0C /* ThemeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DD51C2F8C7D00712C0C /* ThemeUtil.swift */; };
+		AAD39DD91C2F8EAC00712C0C /* ThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD39DD81C2F8EAC00712C0C /* ThemeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AAD39DAF1C2C823200712C0C /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD39DB21C2C823200712C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAD39DB41C2C823200712C0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAD39DB41C2C823200712C0C /* TipsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsController.swift; sourceTree = "<group>"; };
 		AAD39DB71C2C823200712C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAD39DB91C2C823200712C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD39DBC1C2C823200712C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD39DBE1C2C823200712C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD39DC51C2CF33400712C0C /* TipsSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsSettingsController.swift; sourceTree = "<group>"; };
+		AAD39DC81C2D2C9D00712C0C /* PreferencesUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesUtil.swift; sourceTree = "<group>"; };
+		AAD39DCB1C2E02AE00712C0C /* TipsPercentageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsPercentageController.swift; sourceTree = "<group>"; };
+		AAD39DCE1C2E282500712C0C /* TipSelectedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipSelectedDelegate.swift; sourceTree = "<group>"; };
+		AAD39DD51C2F8C7D00712C0C /* ThemeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeUtil.swift; sourceTree = "<group>"; };
+		AAD39DD81C2F8EAC00712C0C /* ThemeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,51 @@
 			isa = PBXGroup;
 			children = (
 				AAD39DB21C2C823200712C0C /* AppDelegate.swift */,
-				AAD39DB41C2C823200712C0C /* ViewController.swift */,
+				AAD39DD71C2F8E9300712C0C /* Extension */,
+				AAD39DCD1C2E280D00712C0C /* Protocols */,
+				AAD39DC71C2CF35300712C0C /* View Controllers */,
+				AAD39DCA1C2D2CA500712C0C /* Util */,
 				AAD39DB61C2C823200712C0C /* Main.storyboard */,
 				AAD39DB91C2C823200712C0C /* Assets.xcassets */,
 				AAD39DBB1C2C823200712C0C /* LaunchScreen.storyboard */,
 				AAD39DBE1C2C823200712C0C /* Info.plist */,
 			);
 			path = tips;
+			sourceTree = "<group>";
+		};
+		AAD39DC71C2CF35300712C0C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAD39DB41C2C823200712C0C /* TipsController.swift */,
+				AAD39DC51C2CF33400712C0C /* TipsSettingsController.swift */,
+				AAD39DCB1C2E02AE00712C0C /* TipsPercentageController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AAD39DCA1C2D2CA500712C0C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AAD39DC81C2D2C9D00712C0C /* PreferencesUtil.swift */,
+				AAD39DD51C2F8C7D00712C0C /* ThemeUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		AAD39DCD1C2E280D00712C0C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AAD39DCE1C2E282500712C0C /* TipSelectedDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AAD39DD71C2F8E9300712C0C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AAD39DD81C2F8EAC00712C0C /* ThemeExtension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD39DB51C2C823200712C0C /* ViewController.swift in Sources */,
+				AAD39DC91C2D2C9D00712C0C /* PreferencesUtil.swift in Sources */,
+				AAD39DC61C2CF33400712C0C /* TipsSettingsController.swift in Sources */,
+				AAD39DB51C2C823200712C0C /* TipsController.swift in Sources */,
+				AAD39DCF1C2E282500712C0C /* TipSelectedDelegate.swift in Sources */,
+				AAD39DD61C2F8C7D00712C0C /* ThemeUtil.swift in Sources */,
 				AAD39DB31C2C823200712C0C /* AppDelegate.swift in Sources */,
+				AAD39DCC1C2E02AE00712C0C /* TipsPercentageController.swift in Sources */,
+				AAD39DD91C2F8EAC00712C0C /* ThemeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
